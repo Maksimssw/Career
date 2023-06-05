@@ -8,8 +8,11 @@
   --color-green200:   #374D38;
 
   --color-dark100:    #222222;
+  --color-dark200:    #050505;
 
-  --container-width:  1290px;
+  --header-height:    60px;
+
+  --container-width:  1170px;
   --container-indent: calc(50% - var(--container-width) / 2);
 
   --header-height:    88px;
@@ -39,7 +42,7 @@
   line-height: 1;
   font-family: 'Montserrat';
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 500;
   border: none;
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
@@ -51,8 +54,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  font-weight: 400;
-  background-color: var(--color-white);
+  background-color: var(--color-dark200);
 }
 
 main {
@@ -157,3 +159,63 @@ i {
   width: 24px;
   height: 24px;
 }
+
+.button {
+  border-radius: 28px;
+  padding: 0 28px;
+  height: 56px;
+  line-height: 20px;
+  letter-spacing: -0.04em;
+  color: var(--color-white);
+  font-weight: 700;
+  transition: background 0.2s;
+}
+
+.button_fill {
+  background: var(--color-green200);
+  border: 1px solid var(--color-green200);
+}
+
+.button_fill:hover {
+  background: none;
+}
+
+.button_empty {
+  border: 1px solid var(--color-green200);
+}
+
+.button_empty:hover {
+  background: var(--color-green200);
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  width: 100%;
+}
+
+.header__link {
+  width: 114px;
+  height: 28px;
+}
+
+.menu {
+  grid-column-gap: 52px;
+}
+
+.menu__link {
+  line-height: 20px;
+  letter-spacing: -0.04em;
+  color: var(--color-gray100);
+}
+
+.menu__link:hover {
+  color: var(--color-white);
+}
+
+.menu__link_active {
+  color: var(--color-white);
+}
+
